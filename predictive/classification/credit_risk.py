@@ -34,3 +34,12 @@ print('-' * 100)
 ic('# Obtendo os dados do menor valor de dívida')
 ic(base_credit[base_credit['loan'] <= 1.377630])
 print('-' * 100)
+
+ic('# Obtendo os valores únicos da coluna default e as quantidades')
+ic(np.unique(base_credit['default'], return_counts=True))
+print('-' * 100)
+
+### Visualização de Dados
+
+ic(sns.countplot(x = base_credit['default']))
+print('-' * 100)
